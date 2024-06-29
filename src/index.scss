@@ -1,0 +1,25 @@
+$primary: orange;
+$secondary: rgb(45, 45, 45);
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+.footer {
+	margin: 0;
+	width: 100%;
+}
+body {
+	min-height: 100vh;
+	background-color: $secondary;
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

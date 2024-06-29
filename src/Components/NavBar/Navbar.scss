@@ -1,0 +1,207 @@
+$prim-font: 'Outfit', sans-serif;
+$primary: rgb(255, 123, 0);
+$secondary: rgb(45, 45, 45);
+
+* {
+	font-family: $prim-font;
+	color: azure;
+}
+
+.navbar {
+	margin-top: 20px;
+	display: flex;
+
+	align-items: center;
+	justify-content: space-between;
+	.logo {
+		text-wrap: nowrap;
+		font-size: 1.2rem;
+	}
+	.menu ul {
+		display: flex;
+		gap: 30px;
+		margin-top: 30px;
+		list-style: none;
+		text-wrap: nowrap;
+		font-weight: 600;
+
+		a {
+			position: relative;
+			cursor: pointer;
+		}
+
+		.underline-effect {
+			position: relative;
+			color: #ffffff;
+			text-decoration: none;
+			font-weight: bold;
+		}
+
+		.underline-effect::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -5px;
+			width: 100%;
+			height: 2px;
+			background-color: rgb(255, 123, 0);
+			transform: scaleX(0);
+			transform-origin: left;
+			transition: transform 0.3s ease;
+		}
+		a {
+			position: relative;
+		}
+
+		.underline-effect {
+			position: relative;
+			color: #ffffff;
+			text-decoration: none;
+			font-weight: bold;
+		}
+
+		.underline-effect::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -5px;
+			width: 100%;
+			height: 2px;
+			background-color: $primary;
+			transform: scaleX(0);
+			transition: transform 0.5s ease;
+		}
+
+		.underline-effect:hover::after {
+			transform: scaleX(1);
+		}
+	}
+	.search {
+		display: flex;
+		gap: 40px;
+		.bask {
+			position: relative;
+			.dot {
+				position: absolute;
+				min-height: 10px;
+				border-radius: 5px;
+				min-width: 10px;
+				background-color: $primary;
+				top: -10px;
+				right: -8px;
+			}
+		}
+	}
+	img {
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+	}
+	button {
+		text-wrap: nowrap;
+		padding: 0.8rem 1.6rem;
+		border: transparent;
+		background-color: $primary;
+		border-radius: 30px;
+		font-size: 1.1rem;
+		transition: all 0.5s ease;
+		font-weight: 600;
+	}
+	button:hover {
+		background-color: rgb(34, 34, 34);
+		color: $primary;
+	}
+}
+@media (max-width: 1080px) {
+	.navbar .logo {
+		font-size: 1rem;
+	}
+
+	.navbar .menu ul {
+		gap: 20px;
+		font-size: 0.9rem;
+	}
+
+	.navbar .search img {
+		width: 22px;
+		height: 22px;
+		transform: translateX(25px);
+	}
+	.navbar .bask img {
+		width: 22px;
+		height: 22px;
+	}
+	.navbar .sign {
+		padding: 0.7rem 1.4rem;
+		margin-left: 20px;
+		font-size: 0.8rem;
+	}
+}
+@media (max-width: 950px) {
+	.navbar .logo {
+		font-size: 0.8rem;
+	}
+
+	.navbar .menu ul {
+		gap: 14px;
+		font-size: 0.8rem;
+	}
+	.navbar .search {
+		margin-right: 10px;
+	}
+
+	.navbar .search img {
+		width: 19px;
+		height: 19px;
+	}
+	.navbar .bask img {
+		width: 19px;
+		height: 19px;
+	}
+	.navbar .sign {
+		padding: 0.6rem 1.2rem;
+		margin-left: 10px;
+		font-size: 0.8rem;
+	}
+}
+
+@media (max-width: 800px) {
+	.navbar .menu ul {
+		display: none;
+	}
+}
+@media (max-width: 560px) {
+	.navbar .logo {
+		font-size: 0.5rem;
+	}
+
+	.navbar .search {
+		margin-right: 20px;
+	}
+
+	.navbar .search img {
+		width: 16px;
+		height: 16px;
+	}
+	.navbar .bask img {
+		width: 16px;
+		height: 16px;
+	}
+	.navbar .sign {
+		padding: 0.6rem 1.2rem;
+		margin-left: 20px;
+		font-size: 0.8rem;
+	}
+}
+@media (max-width: 410px) {
+	.navbar .sign {
+		padding: 0.4rem 1rem;
+		margin-left: 10px;
+		font-size: 0.8rem;
+	}
+	.navbar .bask img {
+		width: 16px;
+		height: 16px;
+		margin-right: 20px;
+	}
+}

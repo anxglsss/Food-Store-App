@@ -1,0 +1,99 @@
+.wrapp {
+	position: absolute;
+	z-index: 1;
+	width: 420px;
+	min-height: 460px;
+	background-color: rgb(239, 239, 239);
+	border: none;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	place-self: center;
+	margin-left: 370px;
+	margin-top: 135px;
+
+	div,
+	h2,
+	span,
+	input,
+	p {
+		color: black;
+	}
+	.cross {
+		margin-left: 375px;
+		transform: translateY(-60px);
+		cursor: pointer;
+		animation: fadeIn 1s ease;
+	}
+	.card {
+		margin-top: 10px;
+		margin-left: 20px;
+		margin-bottom: 20px;
+		font-size: 2rem;
+		text-wrap: nowrap;
+		font-weight: 700;
+		animation: fadeIn 1s ease;
+	}
+
+	.input {
+		display: flex;
+		width: 95%;
+		padding: 0.7rem 1.4rem;
+		gap: 20px;
+		transform: translateY(-30px);
+		flex-direction: column;
+		border: none;
+		outline: none;
+		animation: fadeIn 1s ease;
+		input {
+			padding: 0.9rem 1.1rem;
+			border: none;
+			outline: none;
+			border-radius: 10px;
+		}
+	}
+	p {
+		color: rgb(81, 81, 81);
+		animation: fadeIn 1s ease;
+	}
+	.agree {
+		color: rgb(81, 81, 81);
+		display: flex;
+		margin-left: 7%;
+		gap: 10px;
+		margin-top: 20px;
+		animation: fadeIn 1s ease;
+		color: blue;
+	}
+	button {
+		background-color: rgb(255, 123, 0);
+		border: none;
+		padding: 0.7rem 1.1rem;
+		font-size: 1rem;
+		width: 340px;
+		margin-left: 30px;
+		margin-top: -1px;
+		text-wrap: nowrap;
+		font-weight: 600;
+		border-radius: 15px;
+		cursor: pointer;
+		animation: fadeIn 1s ease;
+	}
+	button:hover {
+		background-color: rgb(26, 26, 26);
+		color: rgb(255, 123, 0);
+	}
+	h2 {
+		color: rgb(81, 81, 81);
+		font-size: 1rem;
+		font-weight: 500;
+		margin-left: 28px;
+		margin-top: 20px;
+		animation: fadeIn 1s ease;
+	}
+	span {
+		color: rgb(0, 183, 255);
+		cursor: pointer;
+		animation: fadeIn 1s ease;
+	}
+}

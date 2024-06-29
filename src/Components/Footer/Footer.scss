@@ -1,0 +1,129 @@
+.footer {
+	background-color: rgb(45, 45, 45);
+
+	color: #fff;
+	padding: 40px 20px;
+	text-align: center;
+
+	.content {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 50px;
+		margin-left: 60px;
+		hr {
+			grid-column: 1 / -1;
+			border: 0;
+			border-top: 1px solid #444;
+			margin-bottom: 40px;
+		}
+
+		.logo,
+		.list,
+		.contact {
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+		}
+
+		.logo {
+			h1 {
+				font-size: 28px;
+				margin-bottom: 24px;
+			}
+
+			p {
+				font-size: 17px;
+				line-height: 1.8;
+				text-align: left;
+			}
+
+			.images {
+				margin-top: 20px;
+				display: flex;
+
+				img {
+					width: 40px;
+					margin: 0 10px;
+					transition: transform 0.3s;
+
+					&:hover {
+						transform: scale(1.1);
+					}
+				}
+			}
+		}
+
+		.list {
+			margin-left: 50px;
+			h1 {
+				transform: translateY(-30px);
+				font-size: 28px;
+			}
+
+			ul {
+				list-style: none;
+				padding: 0;
+				transform: translateY(-30px);
+				li {
+					text-align: left;
+					font-size: 16px;
+					margin-bottom: 10px;
+					cursor: pointer;
+					transition: color 0.3s;
+
+					&:hover {
+						color: #bbb;
+					}
+				}
+			}
+		}
+
+		.contact {
+			margin-left: 40px;
+			h1 {
+				font-size: 24px;
+				margin-bottom: 20px;
+			}
+
+			h3 {
+				font-size: 18px;
+				margin-bottom: 14px;
+			}
+
+			p {
+				font-size: 16px;
+			}
+		}
+	}
+
+	h2 {
+		margin-top: 40px;
+		font-size: 16px;
+		color: #bbb;
+	}
+}
+@media (max-width: 800px) {
+	.footer .content {
+		grid-template-columns: 1fr; /* Stack columns into a single column */
+		text-align: center; /* Center align content */
+	}
+
+	.footer hr {
+		margin: 0 auto 30px auto; /* Center horizontal rule */
+		transform: none; /* Remove transform */
+	}
+
+	.footer .content .list ul,
+	.footer .content .logo h1 {
+		margin-left: -30px; /* Remove right margin */
+		transform: none; /* Remove transform */
+	}
+
+	.footer .content .logo {
+		margin-right: 0; /* Remove right margin */
+	}
+
+	.footer .content .list li {
+		text-align: center; /* Center align list items */
+	}
+}

@@ -1,0 +1,92 @@
+.card {
+	border: 1px solid transparent !important;
+	border-radius: 20px;
+
+	animation: fadeIn 1.5s ease-in-out;
+	.title {
+		margin: 0px;
+		margin-bottom: 10px;
+		align-items: center;
+		margin-top: 10px;
+
+		p {
+			font-size: 1.5rem;
+			font-weight: 600;
+		}
+		img {
+			float: left;
+		}
+	}
+	h1 {
+		color: rgb(214, 108, 21);
+		font-weight: 700;
+		margin-left: 10px;
+		margin-bottom: 20px;
+	}
+	.desc {
+		margin: 5px;
+		width: 60%;
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.food {
+	width: 260px;
+	border-radius: 20px;
+	position: relative;
+}
+.wrapper {
+	position: relative;
+}
+.add {
+	width: 35px;
+	position: absolute;
+	top: 5px;
+	cursor: pointer;
+	left: 5px;
+	border-radius: 50%;
+}
+.counter {
+	display: flex;
+	background-color: white;
+	width: 81px;
+	position: relative;
+	align-items: center;
+	margin-top: 4px;
+	border-radius: 30px;
+	gap: 8px;
+	p {
+		color: black;
+		font-weight: 700;
+		position: absolute;
+		left: 37px;
+		top: 4px;
+	}
+}
+.green {
+	width: 30px;
+	position: absolute;
+	right: 0px;
+	cursor: pointer;
+}
+.red {
+	width: 30px;
+	cursor: pointer;
+}
+@media (max-width: 1238px) {
+	.wrapper .food {
+		width: 210px;
+	}
+	.card .wrapper .title {
+		display: block;
+	}
+}
